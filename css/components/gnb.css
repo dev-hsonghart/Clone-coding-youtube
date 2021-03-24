@@ -1,0 +1,29 @@
+.gnb-container {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+
+  background-color: white;
+}
+
+.gnb-column__left {
+  min-width: 100px;
+}
+
+.gnb-column__center {
+  width: 350px;
+}
+
+.gnb-input-search {
+  width: calc(100% - 40px);
+  border: solid 1px #e7e7e7;
+}
+
+.gnb-column__right {
+  display: flex;
+  min-width: 80px;
+}

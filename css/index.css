@@ -1,0 +1,19 @@
+@import "reset.css";
+@import "valuables.css";
+@import "status.css";
+/* components */
+@import "components/gnb.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+button {
+  cursor: pointer;
+}
