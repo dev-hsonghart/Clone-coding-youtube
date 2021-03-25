@@ -11,11 +11,11 @@
 }
 
 .gnb-column__left {
-  min-width: 100px;
+  min-width: 110px;
 }
 
 .gnb-column__center {
-  width: 350px;
+  width: 400px;
 }
 
 .gnb-input-search {
@@ -25,5 +25,12 @@
 
 .gnb-column__right {
   display: flex;
-  min-width: 80px;
+  justify-content: flex-end;
+  min-width: 130px;
+}
+
+.gnb-btn-hamburder,
+.right,
+.gnb-current-user {
+  margin: 0px 6px;
 }
