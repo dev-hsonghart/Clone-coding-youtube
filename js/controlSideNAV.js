@@ -17,17 +17,17 @@ function navToggle(e){
       navList.style.display = "";
     }
   } else{
-    const targetTopParent = e.target.parentNode.parentNode.parentNode,
-      targetHiddenParent = e.target.parentNode.parentNode.parentNode.parentNode;
+    const targetTopParent = e.target.parentNode.parentNode.parentNode, // = gnb-container
+      targetHiddenParent = e.target.parentNode.parentNode.parentNode.parentNode; // = side-nav__list-hidden
 
     if(targetTopParent.className === "gnb-container"){
-      btnHiddenNav.style.left = "0px";
-      btnHiddenNav.style.display = "";
-      hiddenDim.style.display = "block";
+      btnHiddenNav.style.left = "0px"; // 초기값 left = -300px;
+      btnHiddenNav.style.display = ""; // resize로 인해 block 처리 됐을 경우를 대비하여 display 초기화
+      hiddenDim.style.display = "block"; // dim 출력
       hiddenDim.style.opacity = "1";
     } else if(targetHiddenParent.className === "side-nav__list--hidden"){
-      btnHiddenNav.style.left = "-300px";
-      hiddenDim.style.display = "none";
+      btnHiddenNav.style.left = "-300px"; // 초기값으로 복귀
+      hiddenDim.style.display = "none"; // dim 없애기
       hiddenDim.style.opacity = "0";
     }
   }
@@ -42,12 +42,15 @@ function mediaQuerySideNav(){
       btnHiddenNav.style.display = "none";
       navTab.style.display = "none";
       navList.style.display = "";
+      // nav list hidden이 보여진 상태에서 resize 시 처리 
+      // nav list와 dim을 초기값으로 설정하고 display none 처리를 하여 화면 resize에 따라 밑 레이어의 html 요소와 자연스럽게 연결되게 한다.
       hiddenDim.style.display = "none";
       hiddenDim.style.opacity = "0";
       btnHiddenNav.style.left = "-300px";
     } else{
       navTab.style.display = "none";
       navList.style.display = "";
+      // nav list hidden의 위치를 초기값으로 이동.
       btnHiddenNav.style.display = "block";
       btnHiddenNav.style.left = "-300px";
     }
