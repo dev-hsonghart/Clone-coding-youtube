@@ -1,0 +1,17 @@
+/* gnb 우측  내 프로필 */
+.user-profile__gnb,
+.user-profile__nav {
+  border-radius: 50%;
+}
+
+.user-profile__gnb {
+  background-color: teal;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}

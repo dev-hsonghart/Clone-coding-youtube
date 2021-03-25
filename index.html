@@ -12,7 +12,26 @@
     <title>Hello, Youtube</title>
   </head>
   <body>
-    <nav class="gnb-container">
+    <nav class="side-nav__list--hidden">
+      <ul>
+        <li class="side-nav__left">
+          <button class="gnb-btn-hamburder"><i class="fas fa-bars"></i></button>
+          <a class="gnb-logo" href="#"
+            ><i class="fab fa-youtube"></i><strong>Premium</strong></a
+          >
+        </li>
+        <li class="side-nav__column">
+          <div class="side-menu">
+            <div class="side-menu__icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="side-menu__title">홈</div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="hidden-dim"></div>
+    <header class="gnb-container">
       <div class="gnb-column__left">
         <button class="gnb-btn-hamburder"><i class="fas fa-bars"></i></button>
         <a class="gnb-logo" href="#"
@@ -45,9 +64,33 @@
             <i class="fas fa-bell"></i>
           </button>
         </div>
-        <div class="gnb-current-user">쏭</div>
+        <div class="user-profile__gnb">쏭</div>
       </div>
+    </header>
+
+    <nav class="side-nav__list">
+      <ul>
+        <li class="side-nav__column">
+          <div class="side-menu">
+            <div class="side-menu__icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="side-menu__title">홈</div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <nav class="side-nav__tab">
+      <ul>
+        <li class="side-tab">
+          <div class="side-tab__icon--active">
+            <i class="fas fa-home"></i>
+          </div>
+          <div class="side-tab__title active">홈</div>
+        </li>
+      </ul>
     </nav>
     <script src="js/controlNAV.js" defer></script>
+    <script src="js/controlSideNAV.js" defer></script>
   </body>
 </html>
