@@ -5,6 +5,8 @@
 @import "components/gnb.css";
 @import "components/user-thumbnail.css";
 @import "components/nav.css";
+/* screens */
+@import "screen/home.css";
 
 * {
   box-sizing: border-box;

@@ -4,11 +4,43 @@
   width: 13.75rem;
   height: 100vh;
 }
-.side-nav__column {
+
+.side-nav__ul {
   padding: 0.625rem 0rem;
 }
 
-.side-menu {
+.side-nav__category,
+.side-nav__link,
+.side-nav__footer {
+  width: 100%;
+  padding-left: 1.5rem;
+  font-size: 13px;
+  margin: 10px 0px;
+  color: var(--darkGray);
+}
+
+.side-nav__link a {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.side-nav__footer p {
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--silver);
+}
+
+.link-empty {
+  width: 100%;
+  height: 4px;
+}
+
+.side-menu--active {
+  background-color: var(--platinum50);
+}
+
+.side-menu,
+.side-menu--active {
   height: 2.5rem;
   display: flex;
   align-items: center;
@@ -16,6 +48,10 @@
 }
 
 .side-menu:hover {
+  background-color: var(--platinum);
+}
+
+.side-menu--active:hover {
   background-color: var(--platinum);
 }
 
@@ -28,14 +64,37 @@
   margin-left: 1.5rem;
 }
 
+.side-menu__icon i {
+  color: var(--darkGray);
+  font-size: 18px;
+}
+
+.side-menu--active i {
+  color: var(--youtube);
+}
+
 .side-menu__title {
-  max-width: 136px;
-  text-align: center;
-  margin-left: 0.875rem;
+  width: calc(100% - 94px);
+  text-align: left;
+  margin: 0rem 0.875rem;
   font-size: 0.875rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 400;
+}
+
+.side-nav__divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--platinum);
+}
+
+.side-menu__dotNew {
+  width: 6px;
+  height: 6px;
+  background-color: royalblue;
+  border-radius: 50%;
 }
 
 /* 탭 스타일 */
@@ -48,11 +107,16 @@
 
 .side-tab {
   width: 100%;
-  height: 5rem;
+  height: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.side-tab:hover {
+  background-color: var(--platinum);
+  cursor: pointer;
 }
 
 .side-tab__icon {
@@ -61,6 +125,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.125rem;
 }
 
 .side-tab__icon--active {
@@ -109,6 +174,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
+  display: block;
   z-index: 0;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
