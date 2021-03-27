@@ -30,23 +30,15 @@ function toggleMenu(e){
     hidden[i].classList.toggle("none");
   }
   
-  if(ul.className === "side-nav__ul subscribe"){
-    if(icon.className === "fas fa-chevron-down"){
-      icon.className = "fas fa-chevron-up"
-      title.innerText = "간략히 보기"
-    } else{
-      icon.className = "fas fa-chevron-down"
-      title.innerText = `${hidden.length}개 더보기`
-    }
+  if(icon.className === "fas fa-chevron-down"){
+    icon.className = "fas fa-chevron-up"
+    title.innerText = "간략히 보기"
+  } else if(ul.className === "side-nav__ul subscribe"){
+    icon.className = "fas fa-chevron-down"
+    title.innerText = `${hidden.length}개 더보기`
   } else{
-    if(icon.className === "fas fa-chevron-down"){
-      icon.className = "fas fa-chevron-up"
-      title.innerText = "간략히 보기"
-    } else{
-      icon.className = "fas fa-chevron-down"
-      title.innerText = "더보기"
-    }
-  
+    icon.className = "fas fa-chevron-down"
+    title.innerText = "더보기"
   }
 }
 
