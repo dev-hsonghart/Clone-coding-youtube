@@ -5,8 +5,8 @@ const hiddenNav = document.querySelector(".side-nav__list--hidden"),
   hiddenSubscribe = hiddenNav.querySelector(".subscribe"),
   defaultNav = document.querySelector(".side-nav__list"),
   defaultMore = defaultNav.querySelector(".normalMore"),
-  subscribeList = defaultNav.querySelector(".subscribe"),
-  subscribeMore = defaultNav.querySelector(".subMore");
+  subscribeMore = defaultNav.querySelector(".subMore"),
+  subscribeList = defaultNav.querySelector(".subscribe");
 
 function printCurrentSubscribe(){
   // 구독 카테고리에 숨겨진 구독채널 갯수 표시
@@ -26,21 +26,11 @@ function toggleMenu(e){
     icon = li.querySelector("i"),
     title = li.querySelector(".side-menu__title");
   
-  if(ul.className === "side-nav__ul second-menu"){
-    for(let i = 0; i < hidden.length; i++){
-      hidden[i].classList.toggle("none");
-    }
-    if(icon.className === "fas fa-chevron-down"){
-      icon.className = "fas fa-chevron-up"
-      title.innerText = "간략히 보기"
-    } else{
-      icon.className = "fas fa-chevron-down"
-      title.innerText = "더보기"
-    }
-  } else if(ul.className === "side-nav__ul subscribe"){
-    for(let i = 0; i < hidden.length; i++){
-      hidden[i].classList.toggle("none");
-    }
+  for(let i = 0; i < hidden.length; i++){
+    hidden[i].classList.toggle("none");
+  }
+  
+  if(ul.className === "side-nav__ul subscribe"){
     if(icon.className === "fas fa-chevron-down"){
       icon.className = "fas fa-chevron-up"
       title.innerText = "간략히 보기"
@@ -48,6 +38,15 @@ function toggleMenu(e){
       icon.className = "fas fa-chevron-down"
       title.innerText = `${hidden.length}개 더보기`
     }
+  } else{
+    if(icon.className === "fas fa-chevron-down"){
+      icon.className = "fas fa-chevron-up"
+      title.innerText = "간략히 보기"
+    } else{
+      icon.className = "fas fa-chevron-down"
+      title.innerText = "더보기"
+    }
+  
   }
 }
 
