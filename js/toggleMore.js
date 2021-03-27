@@ -1,22 +1,19 @@
 // 더보기를 누르면 감춰진 메뉴가 보이고 한번 더 누르면 보여진 메뉴가 숨겨진다.
-const hiddenNav = document.querySelector(".side-nav__list--hidden"),
-  hiddenMore = hiddenNav.querySelector(".normalMore"),
-  hiddenSubMore = hiddenNav.querySelector(".subMore"),
-  hiddenSubscribe = hiddenNav.querySelector(".subscribe"),
-  defaultNav = document.querySelector(".side-nav__list"),
-  defaultMore = defaultNav.querySelector(".normalMore"),
-  subscribeMore = defaultNav.querySelector(".subMore"),
-  subscribeList = defaultNav.querySelector(".subscribe");
+const subscribeList = document.querySelectorAll(".subscribe"),
+  noarmlMore = document.querySelectorAll(".normalMore"),
+  subscribeMore = document.querySelectorAll(".subMore");
 
 function printCurrentSubscribe(){
   // 구독 카테고리에 숨겨진 구독채널 갯수 표시
-  const subHidden = subscribeList.querySelectorAll(".hidden"),
-  title = subscribeMore.querySelector(".side-menu__title"),
-  subHidden2 = hiddenSubscribe.querySelectorAll(".hidden"),
-  title2 = hiddenSubMore.querySelector(".side-menu__title");
+  const subHiddenHidden = subscribeList[0],
+  subHiddens0 = subHiddenHidden.querySelectorAll(".hidden"),
+  title = subHiddenHidden.querySelector(".Nmore"),
+  subHidden = subscribeList[1],
+  subHiddens1 = subHidden.querySelectorAll(".hidden"),
+  title2 = subHidden.querySelector(".Nmore");
   
-  title.innerText = `${subHidden.length}개 더보기`;
-  title2.innerText = `${subHidden2.length}개 더보기`;
+  title.innerText = `${subHiddens0.length}개 더보기`;
+  title2.innerText = `${subHiddens1.length}개 더보기`;
 }
 
 function toggleMenu(e){
@@ -44,10 +41,13 @@ function toggleMenu(e){
 
 function init(){
   printCurrentSubscribe();
-  defaultMore.addEventListener("click", toggleMenu);
-  hiddenMore.addEventListener("click", toggleMenu);
-  subscribeMore.addEventListener("click", toggleMenu);
-  hiddenSubMore.addEventListener("click", toggleMenu);
+  
+  for(let i =0; i< noarmlMore.length; i++){
+    noarmlMore[i].addEventListener("click", toggleMenu);
+  }
+  for(let i =0; i< subscribeMore.length; i++){
+    subscribeMore[i].addEventListener("click", toggleMenu);
+  }
 }
 
 init();
