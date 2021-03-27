@@ -3,6 +3,7 @@
   background-color: white;
   width: 13.75rem;
   height: 100vh;
+  overflow: scroll;
 }
 
 .side-nav__ul {
@@ -75,6 +76,7 @@
 
 .side-menu__title {
   width: calc(100% - 94px);
+  line-height: 2.5rem;
   text-align: left;
   margin: 0rem 0.875rem;
   font-size: 0.875rem;
