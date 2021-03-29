@@ -9,11 +9,10 @@ function printCurrentSubscribe(){
   subHiddens0 = subHiddenHidden.querySelectorAll(".hidden"),
   title = subHiddenHidden.querySelector(".Nmore"),
   subHidden = subscribeList[1],
-  subHiddens1 = subHidden.querySelectorAll(".hidden"),
   title2 = subHidden.querySelector(".Nmore");
   
   title.innerText = `${subHiddens0.length}개 더보기`;
-  title2.innerText = `${subHiddens1.length}개 더보기`;
+  title2.innerText = `${subHiddens0.length}개 더보기`;
 }
 
 function toggleMenu(e){
