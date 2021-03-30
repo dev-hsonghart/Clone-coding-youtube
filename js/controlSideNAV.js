@@ -8,7 +8,7 @@ function navToggle(e){
   const windowWidth1280 = window.matchMedia("(min-width: 1280px)"),
     navTabDisplay = navTab.style.display;
 
-  if(windowWidth1280.matches === true){ // 790px이상
+  if(windowWidth1280.matches === true){ // 1280px이상
     if(navTabDisplay === "none"){
       navTab.style.display = "";
       navList.style.display = "none";
